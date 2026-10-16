@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Super Duper Cool Escape Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="progressContainer" hidden>
+    <p id="progressText">Puzzle 1 of 6</p>
+
+    <div class="progressTrack">
+        <div id="progressFill"></div>
+    </div>
+</div>
+<div id="welcomeScreen">
+    <h1>Annalise and Josh's Escape Room!</h1>
+
+    <p>Can you navigate all the puzzles to get to your other presents?</p>
+
+    <button id="startButton">Start</button>
+</div>
+
+<div id="puzzle1Screen" hidden>
+    <h1>Puzzle 1: A Numbers Game</h1>
+
+    <p>Fitting digits for a day like this...</p>
+
+    <input id="puzzle1Answer" type="text" placeholder="Type your answer here">
+
+    <button id="checkAnswerButton">Check Answer</button>
+
+    <p id="puzzle1Message"></p>
+</div>
+    <div id="puzzle2Screen" hidden>
+    <h1>Puzzle 2: A Memory Test</h1>
+
+    <p>Which photo is reminiscent of both our favorite memories together?</p>
+
+    <button class="photoChoice" data-correct="false">
+        <img src="images/photo-bday.JPG" alt="Birthday memory">
+    </button>
+
+    <button class="photoChoice" data-correct="true">
+        <img src="images/photo-monterey.JPG" alt="Monterey memory">
+    </button>
+
+    <button class="photoChoice" data-correct="false">
+        <img src="images/photo-oland.jpeg" alt="Another memory">
+    </button>
+
+    <p id="photoMessage"></p>
+
+    <div id="photoQuestion" hidden>
+        <p>Now that I've tested your memories, do you remember EXACTLY where this picture was taken?</p>
+
+        <input id="puzzle2Answer" type="text" placeholder="Type your answer here">
+
+        <button id="checkPuzzle2Button">Check Answer</button>
+
+        <p id="puzzle2Message"></p>
+    </div>
+</div><div id="puzzle3Screen" hidden>
+    <h1>Puzzle 3: A, B, C is for Clippers </h1>
+
+    <p>Me: “The Clippers are cooked!”</p>
+    <p>You: “They’re just rebuilding right now”</p>
+
+    <p>You: 1 - 7 - 18 - 5 - 5 &nbsp; 15 - 18 &nbsp; 14 - 1 - 8</p>
+
+    <input id="puzzle3Answer" type="text" placeholder="Type your answer here">
+
+    <button id="checkPuzzle3Button">Check Answer</button>
+
+    <p id="puzzle3Message"></p>
+</div>
+<div id="puzzle4Screen" hidden>
+    <h1>Puzzle 4: A Timeline Teaser</h1>
+
+    <p>Click our memories from earliest to latest.</p>
+
+    <div class="timelineChoices">
+        <button class="timelineChoice" data-order="7">
+            Our first date at Giuseppe's
+        </button>
+
+        <button class="timelineChoice" data-order="3">
+            Sam asks me about us
+        </button>
+
+        <button class="timelineChoice" data-order="8">
+            We go to Monterey
+        </button>
+
+        <button class="timelineChoice" data-order="1">
+            Me, you, and Lilian go “climbing out of the trenches”
+        </button>
+
+        <button class="timelineChoice" data-order="6">
+            We watch Star Wars: The Clone Wars
+        </button>
+
+        <button class="timelineChoice" data-order="4">
+            Six-hour couch story time
+        </button>
+
+        <button class="timelineChoice" data-order="2">
+            Me, you, Jerry, and Sasha go kayaking
+        </button>
+
+        <button class="timelineChoice" data-order="5">
+            We get Blenders for the first time
+        </button>
+    </div>
+
+    <p id="timelineProgress"></p>
+    <p id="timelineMessage"></p>
+</div>
+<div id="puzzle5Screen" hidden>
+    <h1>Puzzle 5: Lock it dowwwnnnnnn</h1>
+
+    <p>Solve the clues, then enter the lock code.</p>
+
+    <div class="lockClues">
+        <p>1. How many sweatshirts have I taken from you?</p>
+        <p>2. What is the sum of our favorite Star Wars episodes?</p>
+        <p>3. How many strokes did I win by for mini golf on Valentine’s Day?</p>
+    </div>
+
+    <input
+        id="puzzle5Answer"
+        type="text"
+        inputmode="numeric"
+        maxlength="4"
+        placeholder="Enter the 4-digit code"
+    >
+
+    <button id="checkPuzzle5Button">Unlock</button>
+
+    <p id="puzzle5Message"></p>
+</div> 
+<div id="puzzle6Screen" hidden>
+    <h1>Puzzle 6: Escape Room Final Boss</h1>
+
+    <p>
+        What do you get when you combine a mode of transportation
+        and an outdoor platform?
+    </p>
+
+    <input
+        id="puzzle6Answer"
+        type="text"
+        placeholder="Type your answer here"
+    >
+
+    <button id="checkPuzzle6Button">Unlock</button>
+
+    <p id="puzzle6Message"></p>
+
+    <button id="hint1Button">Hint time?</button>
+
+    <p id="hint1" hidden>
+        Hint 1: If you include suits in the mix, you might be considered royalty…
+    </p>
+
+    <button id="hint2Button" hidden>Need another one?</button>
+
+    <p id="hint2" hidden>
+        Hint 2: Weeks aren’t the only thing there are 52 of…
+    </p>
+</div>  
+<div id="finalScreen" hidden>
+    <h1>🎉 YIPPPPEEEEEEEE YOU DID IT 🎉</h1>
+
+    <p>I hope you enjoyed my fun little adventure version of code and craft time heh</p>
+    <button id="playAgainButton">Play Again</button>
+<img
+    class="finalPhoto"
+    src="images/final.JPG"
+    alt="A favorite memory of Annalise and Josh"
+>
+    <h2>Your anniversary present is:</h2>
+    
+
+    <p class="giftReveal">CLOSE UR EYES AND DRUMROLL PLEASE</p>
+
+    <p>HAPPY ONE WHOLE YEAR STINKY!!!!</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
